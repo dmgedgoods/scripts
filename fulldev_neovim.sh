@@ -22,8 +22,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 git clone https://github.com/dmgedgoods/dotfiles.git
 mkdir -p $HOME/.config/nvim/lua/dmgedgoods && cd "$_"
-cp -r $HOME/dotfiles/.config/nvim/lua/dmgedgoods/packer.lua $HOME/.config/nv>nvim -c so ~/.config/nvim/lua/dmgedgoods/packer.lua -c PackerSync -c qa
-rm -rf $HOME/.config
-ln -s $HOME/dotfiles/.config $HOME/
+cp -r $HOME/dotfiles/.config/nvim/lua/dmgedgoods/packer.lua $HOME/.config/nvim/lua/dmgedgoods
+nvim -c source $HOME/.config/nvim/lua/dmgedgoods/packer.lua -c PackerSync 
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
