@@ -2,7 +2,7 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt-get install -y curl zsh git gh gcc python3.10-venv pip openjdk-18-jre openjdk-18-jdk
+sudo apt-get install -y curl zsh git unzip gh gcc unzip python3.10-venv pip openjdk-18-jre openjdk-18-jdk
 
 sudo wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo tar -zxvf nvim-linux64.tar.gz -C /opt/
