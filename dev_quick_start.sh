@@ -1,7 +1,5 @@
 #!/bin/bash
 
-## After everything is done, source packer.lua, :PackerSync and you should be g2g
-
 sudo apt update && sudo apt upgrade -y
 
 sudo apt-get install -y curl zsh git gh gcc python3.10-venv pip openjdk-18-jre openjdk-18-jdk
@@ -22,10 +20,9 @@ cd ~/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-git clone https://github.com/dmgedgoods/dotfiles.git 
+git clone https://github.com/dmgedgoods/dotfiles.git
 mkdir -p $HOME/.config/nvim/lua/dmgedgoods && cd "$_"
-cp -r $HOME/dotfiles/.config/nvim/lua/dmgedgoods/packer.lua $HOME/.config/nvim/lua/dmgedgoods
-nvim $HOME/.config/nvim/lua/dmgedgoods/packer.lua --headless +so +PackerSync +qa
+cp -r $HOME/dotfiles/.config/nvim/lua/dmgedgoods/packer.lua $HOME/.config/nv>nvim -c so ~/.config/nvim/lua/dmgedgoods/packer.lua -c PackerSync -c qa
 rm -rf $HOME/.config
 ln -s $HOME/dotfiles/.config $HOME/
 
