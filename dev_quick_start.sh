@@ -4,7 +4,7 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt-get install -y curl zsh firefox git gh gcc python3.10-venv pip3 openjdk-17-jre
+sudo apt-get install -y curl zsh firefox git gh gcc python3.10-venv pip3 openjdk-18-jre openjdk-18-jdk
 
 cd /opt
 sudo wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
@@ -21,11 +21,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 cd
-git clone https://github.com/dmgedgoods/dotfiles.git
-cp -r dotfiles/nvim ~/.config
-cp -r dotfiles/tmux ~/.config
-rm -rf dotfiles
-
-curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
-chsh -s $(which zsh)
-zsh
+git clone https://github.com/dmgedgoods/dotfiles.git 
+mkdir -p /home/mack/.config/nvim/lua/dmgedgoods/
+cp /home/mack/dotfiles/.config/nvim/lua/dmgedgoods/packer.lua /home/mack/.config/nvim/lua/dmgedgoods/
+nvim ~/.config/nvim/lua/dmgedgoods/packer.lua --headless +so +q
+ln -s /home/mack/dotfiles/.config /home/mack/.config
