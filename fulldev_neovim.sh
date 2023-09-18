@@ -15,6 +15,7 @@ sudo ln -s /opt/node-v18.17.1-linux-x64/bin/node /usr/bin/node
 sudo ln -s /opt/node-v18.17.1-linux-x64/bin/npm /usr/bin/npm
 sudo ln -s /opt/node-v18.17.1-linux-x64/bin/npx /usr/bin/npx
 sudo rm node-v18.17.1-linux-x64.tar.xz
+rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
