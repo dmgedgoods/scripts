@@ -24,9 +24,9 @@ mkdir -p ~/.config # Just in case
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-git clone https://github.com/dmgedgoods/dotfiles.git
-ln -s ~/dotfiles/.config/nvim/ ~/.config
-ln -s ~/dotfiles/.config/tmux ~/.config
+git clone https://github.com/dmgedgoods/.dotfiles.git
+ln -s ~/.dotfiles/.config/nvim/ ~/.config
+ln -s ~/.dotfiles/.config/tmux ~/.config
 nvim --headless -u NONE ~/.config/nvim/lua/dmgedgoods/packer.lua "+so" "+PackerSync" "+sleep 10" "+qa"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
