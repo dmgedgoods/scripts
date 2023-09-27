@@ -4,7 +4,7 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install -y wget curl tmux tree zsh git tldr fzf unzip gh gcc unzip python3-venv python3-pip default-jdk default-jre 
+sudo apt install -y wget curl tmux tree zsh git tldr fzf unzip gh gcc unzip python3-venv python3-pip openjdk-19-jdk openjdk-19-jre
 
 sudo wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo tar -zxvf nvim-linux64.tar.gz -C /opt/
