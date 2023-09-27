@@ -27,6 +27,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 git clone https://github.com/dmgedgoods/.dotfiles.git
 ln -s ~/.dotfiles/.config/nvim/ ~/.config
 ln -s ~/.dotfiles/.config/tmux ~/.config
-nvim --headless -u NONE ~/.config/nvim/lua/dmgedgoods/packer.lua "+so" "+PackerSync" "+sleep 10" "+qa"
+nvim --headless -u NONE ~/.config/nvim/lua/dmgedgoods/packer.lua "+so" "+PackerSync" "+sleep 7" "+qa"
+nvim ~/.config/.thanks.md "+CellularAutomaton make_it_rain" "+sleep 5" "+qa"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
